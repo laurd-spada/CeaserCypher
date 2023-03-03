@@ -17,13 +17,17 @@ public class Body {
 
         System.out.println("Would you like to \"ENCODE\" a message or to \"DECODE\" a message : ");
         System.out.println("Select 1 to encode or 2 to decode a message");
-        int decision = Integer.parseInt(scanner.nextLine());
-        if (decision == 1){
-            encryption.encryptData();
-        } else if (decision == 2){
-            decryption.decryptData();
-        } else
-            System.out.println("Wrong input");
 
+        while (true){
+            int decision = Integer.parseInt(scanner.nextLine());
+            if (decision == 1){
+                encryption.encryptData();
+                break;
+            } else if (decision == 2){
+                decryption.decryptData();
+                break;
+            } else
+                System.out.println("Wrong input");
+        }
     }
 }
